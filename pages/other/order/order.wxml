@@ -1,0 +1,24 @@
+<!--pages/other/order/order.wxml-->
+<view class="container">
+  <view class="c-oder">确认订单</view>
+  <view class="card">
+    <view class="pic"><text>￥</text>{{price}}</view>
+    <view class="itm">
+      <view>土地名称</view>
+      <view style="color: #000;">{{landName}}</view>
+    </view>
+    <view class="itm">
+      <view>种植作物</view>
+      <view style="color: #000;">{{vImg[plant].text}}</view>
+    </view>
+
+    <view class="desc-box">
+      <view style="font-size: 14px;">备注</view>
+      <input type="text" value="{{desc}}" bindinput="descInput" maxlength="100" />
+    </view>
+  </view>
+
+  <view class="btn" bindtap="confirm">下单</view>
+</view>
+<van-toast id="van-toast" />
+

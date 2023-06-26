@@ -1,0 +1,72 @@
+/* pages/other/farmernews/farmernews.wxss */
+page {
+  background-color: #f9f9f9;
+}
+.container {
+  padding: 20rpx;
+  width: 100%;
+  height: calc(95vh - 30px);
+  box-sizing: border-box;
+  overflow: scroll;
+}
+.news-item {
+  width: 100%;
+  /* height: 40px; */
+  display: flex;
+  margin-bottom: 20px;
+}
+.send-item {
+  width: 100%;
+  /* height: 40px; */
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.news-item image, .send-item image{
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+}
+.msg {
+  display: inline-block;
+  max-width: 70%;
+  word-wrap: break-word;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.send-box {
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 1, 0.1);
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.msg-input {
+  display: inline-block;
+  width: 75%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #f9f9f9;
+  border-radius: 5px;
+}
+
+.send-btn {
+  display: inline-block;
+  width: 20%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 8px;
+  color: #000;
+  background-color: #d5f553;
+}

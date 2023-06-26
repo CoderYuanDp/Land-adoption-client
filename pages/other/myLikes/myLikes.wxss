@@ -1,0 +1,34 @@
+/* pages/other/myLikes/myLikes.wxss */
+page {
+  background-color: #f0f1ea;
+}
+.container {
+  padding: 20px;
+}
+.item {
+  background-color: #fff;
+  padding: 20rpx;
+  display: flex;
+  border-radius: 10rpx;
+  justify-content: space-between;
+}
+.item > image {
+  width: 200rpx; 
+  height: 200rpx;
+}
+
+.tip {
+  color: #76cc53;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.info {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

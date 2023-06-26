@@ -1,0 +1,24 @@
+<!--pages/other/myOrders/myOrders.wxml-->
+<view class="container">
+  <view wx:if="{{myFarmList.length === 0}}">
+    您还没有订单，<text>快去认领吧~</text>
+  </view>
+  <view class="order-con">
+    <view wx:for="{{myFarmList}}" wx:key="index" class="item">
+      <view class="land-name">{{item.land_name}}</view>
+      <view class="content-c">所属农场<view class="content">{{item.farm_name}}</view></view>
+      <view class="content-c">土地面积<view class="content">{{item.land_area}}㎡</view></view>
+      <view class="content-c">土地类型<view class="content">{{item.order_type === 0 ? '土地认养' : '蔬果购买'}}</view></view>
+      <view class="content-c">订单编号<view class="content">{{item.order_id}}</view></view>
+      <view class="content-c">订单金额<view class="content price">￥{{item.order_price}}</view></view>
+      <view class="content-c">订单时间<view class="content">{{item.order_timestamp}}</view></view>
+      <view class="line"></view>
+      <view class="order-desc">订单备注<view class="desc-content">{{item.order_desc}}</view></view>
+
+      <view class="see-btn" data-orderid="{{item.order_id}}" data-farmname="{{item.farm_name}}" data-landname="{{item.land_name}}" bindtap="toOrderDetail">查看土地详情</view>
+
+    </view>
+  </view>
+
+  <view class="bom-tip" wx:if="{{myFarmList.length !== 0}}">到底了 ^-^</view>
+</view>

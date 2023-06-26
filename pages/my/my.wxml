@@ -1,0 +1,33 @@
+<!--pages/my.wxml-->
+<view class="avcter" style="background: linear-gradient(to right bottom, #d3f452 50%, #c8e74c 100%);">
+  <view class="nick-avcter">
+    <image src="{{userInfo.user_avator || 'https://dpweb.club:3000/1679136776577_title.jpg'}}" bindtap="getUserInfo"></image>
+    <view>{{userInfo.user_nickname}}</view>
+  </view>
+</view>
+<view class="container">
+  <view class="count">
+    <view class="count-item">
+      <text class="item-name">我的土地</text>
+      <text class="iten-count" style="color: #8cc269;">{{myFarmList.length}}</text>
+    </view>
+    <view class="count-item">
+      <text class="item-name">可收获土地</text>
+      <text class="iten-count" style="color: #8cc269;">{{Scount}}</text>
+    </view>
+  </view>
+  <view class="set-item-container">
+    <view class="set-item" bindtap="toMyLikes">
+      <image class="icon" src="https://dpweb.club:3000/1681822985359_收藏.png"></image>
+      <view>我的收藏</view>
+    </view>
+    <view class="set-item" bindtap="toMyOrders">
+      <image class="icon" src="https://dpweb.club:3000/1681822985359_订单.png"></image>
+      <view>我的订单</view>
+    </view>
+    <view class="set-item" bindtap="toMyAddress">
+      <image class="icon" src="https://dpweb.club:3000/1682047129441_住址.png"></image>
+      <view>我的住址</view>
+    </view>
+  </view>
+</view>

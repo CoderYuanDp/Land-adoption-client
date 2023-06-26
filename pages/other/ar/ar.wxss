@@ -1,0 +1,19 @@
+/* pages/other/ar/ar.wxss */
+.t-b {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	margin-right: 20px;
+	margin-top: 30px;
+	background: url(https://dpweb.club:3000/1683167936496_cha.png) no-repeat;
+  background-size: 100% 100%;
+	color: #000;
+	border-radius: 12px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	padding: 10rpx 30rpx;
+}

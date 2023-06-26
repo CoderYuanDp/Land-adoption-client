@@ -1,0 +1,2 @@
+<!--pages/other/hotmap/hotmap.wxml-->
+<map style="width: 100vw; height: 100vh;" longitude="{{108.55}}" latitude=" {{34.32}}" scale="5" markers="{{markers}}"/>

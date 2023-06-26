@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "navigationStyle": "custom"
+}

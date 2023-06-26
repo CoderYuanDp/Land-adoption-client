@@ -1,0 +1,139 @@
+/* pages/other/orderDetail/orderDetail.wxss */
+.page {
+  padding: 20rpx;
+  background-color: #fff;
+}
+.land-content {
+  padding: 20rpx;
+  padding-left: 40rpx;
+  background-image: linear-gradient(to bottom, #f5f6ed, #fcefdc);
+  border-radius: 8px;
+  color: #000;
+  font-weight: 800;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.land-content view {
+  margin: 10px 0;
+}
+.land-content view:nth-child(1) {
+  font-size: 16px;
+}
+.land-content view:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+}
+.l-c-t {
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+.container {
+  display: flex;
+  padding: 20rpx;
+}
+.circle {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.line {
+  display: block;
+  width: 2px;
+  height: 200px;
+  background-color: #fff;
+}
+.line-container {
+  display: flex;
+  width: 30rpx;
+  flex-direction: column;
+  align-items: center;
+}
+.content-container {
+  width: 680rpx;
+}
+.content {
+  box-sizing: border-box;
+  height: 210px;
+  padding: 10rpx;
+}
+.content image {
+  width: 100%;
+  max-height: 90%;
+}
+.t-t {
+  padding: 10rpx;
+  font-size: 14px;
+  font-weight: 700;
+}
+.green {
+  background-color: #8dc269;
+  width: 14px;
+  height: 14px;
+}
+.green-line {
+  background-color: #8dc269;
+}
+.gray {
+  background-color: #c0c0c0;
+}
+.big-box {
+  height: 214px;
+}
+
+.pop-con {
+  padding: 20rpx;
+  padding-top: 40rpx;
+}
+.btn-c {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.p-btn {
+  width: 300rpx;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: #c4fb57;
+}
+
+.share-image {
+  width: 450rpx;
+  margin: 66rpx auto 0;
+  display: block;
+  border-radius: 16rpx;
+  box-shadow: 0px 4rpx 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.t-i {
+  width: 350rpx !important;
+  margin-top: 20px;
+  opacity: 0.3;
+  position: relative;
+}
+.poster {
+  position: absolute;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 400;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #f6c546;
+  box-shadow: 0px 4px 8px 0px #e2e2e2;
+}

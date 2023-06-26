@@ -1,0 +1,24 @@
+
+<view class="container">
+
+  <view class="news" bindtap="toSystemNews">
+    <image src="https://dpweb.club:3000/1681822558682_系统消息.png"></image>
+    <view class="tip">
+      <view class="tip-one">
+        <view class="name">系统消息</view>
+        <!-- <view class="time">12:29</view> -->
+      </view>
+    </view>
+  </view>
+
+  <view class="news" bindtap="toFarmerNews">
+    <image src="https://dpweb.club:3000/1681822550136_客服.png"></image>
+    <view class="tip">
+      <view class="tip-one">
+        <view class="name">客服消息</view>
+        <!-- <view class="time">12:30</view> -->
+      </view>
+    </view>
+  </view>
+
+</view>

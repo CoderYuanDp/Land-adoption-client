@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<page-meta page-style="{{ popShow ? 'overflow: hidden;' : '' }}" />
+<swiper style="height: 400rpx;" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{true}}">
+  <block wx:for="{{background}}" wx:key="id">
+    <swiper-item>
+      <van-image width="100%" height="100%" fit="cover" src="{{item.url}}" data-farm_id="{{item.farm_id}}" bindtap="toFarmDetail"></van-image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="container">
+  <view class="header" bindtap="toSearch">
+    <view class="header-title">
+      <view>查找农场</view>
+      <view style="font-weight: 400; color: #bbbbbb;">带你发现更多绿色农场</view>
+    </view>
+    <image style="width: 200rpx; height: 200rpx;" src="https://dpweb.club:3000/1683338421192_farm-icon (3).png" alt="" srcset="" />
+  </view>
+
+  <view class="middle">
+    <view class="middle-item" bindtap="toHotFarm">
+      <view class="item-title">热门农场</view>
+      <view class="item-dec" style="font-weight: 400; color: #bbbbbb;">精准定位</view>
+      <image style="width: 200rpx; height: 200rpx;" src="https://dpweb.club:3000/1682850929893_farm-icon (9).png" alt="" srcset="" />
+    </view>
+    <view class="middle-item" bindtap="toReginFarm">
+      <view class="item-title">附近的农场</view>
+      <view class="item-dec" style="font-weight: 400; color: #bbbbbb;">最近、最快</view>
+      <image src="https://dpweb.club:3000/1682850963105_farm-icon (5).png" alt="" srcset="" />
+    </view>
+  </view>
+
+  <!-- <view class="order-container">
+    <view class="order-item" bindtap="toKnc">
+      <image src="/assets/images/ficons/knc.png" alt="" srcset="" />
+      <view>看农场</view>
+    </view>
+    <view class="order-item" bindtap="toSxy">
+      <image src="/assets/images/ficons/sxy.png" alt="" srcset="" />
+      <view>送心意</view>
+    </view>
+    <view class="order-item" bindtap="toSxgo">
+      <image src="/assets/images/ficons/sxg.png" alt="" srcset="" />
+      <view>省心购</view>
+    </view>
+    <view class="order-item" bindtap="toYqping">
+      <image src="/assets/images/ficons/yqp.png" alt="" srcset="" />
+      <view>一起拼</view>
+    </view>
+  </view> -->
+
+  <view class="bottom-container" bindtap="toHotMap">
+    <view class="text-container">
+      <view style="font-weight: 600;">农场热图</view>
+      <view style="font-size: 12px; font-weight: 400; color: #bbbbbb;">查看全国农场分布</view>
+    </view>
+    <image src="https://dpweb.club:3000/1682850894071_farm-icon (10).png" alt="" srcset="" />
+  </view>
+</view>
+
+
+<van-popup show="{{ popShow }}" bind:close="onClose" custom-style="border-radius: 8px;">
+  <view class="dig-container">
+    <view class="dig-title">补全个人信息</view>
+    <view class="n-a">
+      <input type="text" placeholder="昵称" style="display: inline-block;" value="{{ nickname }}" bindinput="getNickname" />
+      <van-uploader file-list="{{ fileList }}" max-count="1" deletable="{{ true }}" bind:after-read="afterRead" catch:delete="deleteImg" />
+    </view>
+    <view class="ph">
+      <input type="text" placeholder="手机号" model:value="{{ phone }}" bindinput="getPhone" />
+    </view>
+    <view class="close-btn" bindtap="onClose">
+      登录
+    </view>
+  </view>
+</van-popup>

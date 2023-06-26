@@ -1,0 +1,18 @@
+<!--pages/other/farmernews/farmernews.wxml-->
+<view class="container">
+  <block wx:for="{{msgList}}" wx:key="index">
+    <view wx:if="{{item.from == 'admin' || item.from == 'server'}}" class="news-item">
+      <image src="https://dpweb.club:3000/1681820445303_客服.png" alt=""/>
+      <view class="msg">{{item.content}}</view>
+    </view>
+
+    <view wx:if="{{item.to == 'admin' && item.from !== 'server'}}" class="send-item">
+      <view class="msg">{{item.content}}</view>
+      <image src="{{userInfo.user_avator}}" alt=""/>
+    </view>
+  </block>
+</view>
+<view class="send-box">
+  <input class="msg-input" value="{{msg}}" bindinput='msgInput' auto-focus/>
+  <view class="send-btn" bindtap="sendMsg">send</view>
+</view>

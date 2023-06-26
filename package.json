@@ -1,0 +1,17 @@
+{
+  "name": "land-adoption",
+  "version": "1.0.0",
+  "description": "a land adoption micro app",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "@vant/area-data": "^1.4.1",
+    "@vant/weapp": "^1.10.13",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yuan dp",
+  "license": "ISC"
+}

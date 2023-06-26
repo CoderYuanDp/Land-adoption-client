@@ -1,0 +1,70 @@
+/* pages/other/myOrders/myOrders.wxss */
+page {
+  background-color: #f0f1ea;
+}
+.container {
+  padding: 40rpx;
+}
+
+.item {
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.see-btn {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #d5f553;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-left: auto;
+}
+.bom-tip {
+  font-size: 12px;
+  color: #b3b3b3;
+  text-align: center;
+}
+.land-name {
+  font-weight: 800;
+}
+.order-time {
+  font-size: 12px;
+}
+.order-desc {
+  display: flex;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.desc-content {
+  flex: 1;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  margin-left: 5px;
+  background-color: rgba(240, 240, 240, 0.76);
+  word-break: break-all;
+}
+.content-c {
+  display: flex;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.content {
+  margin-left: auto;
+  color: #b3b3b3;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+  background-color: rgba(189, 189, 189, 0.5);
+}
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffca39;
+}

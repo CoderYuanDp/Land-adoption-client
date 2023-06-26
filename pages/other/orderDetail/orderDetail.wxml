@@ -1,0 +1,71 @@
+<!--pages/other/orderDetail/orderDetail.wxml-->
+<page-meta page-style="{{ show ? 'overflow: hidden;' : '' }}" />
+<view class="page">
+  <view class="land-content">
+    <view> {{landName}}</view>
+    <view> {{farmName}}</view>
+    <view class="poster" bindtap="showPop">
+      分享
+    </view>
+  </view>
+  
+  <view class="container">
+    <view class="line-container">
+      <li class="circle {{status_sproute ? 'green' : 'gray'}}"></li>
+      <li class="line {{status_sproute ? 'green-line' : 'gray'}}"></li>
+      <li class="circle {{status_germinate ? 'green' : 'gray'}}"></li>
+      <li class="line {{status_germinate ? 'green-line' : 'gray'}}"></li>
+      <li class="circle {{status_grow ? 'green' : 'gray'}}"></li>
+      <li class="line {{status_grow ? 'green-line' : 'gray'}}"></li>
+      <li class="circle {{status_mature ? 'green' : 'gray'}}"></li>
+    </view>
+    <view class="content-container">
+      <view class="content {{status_sproute ? 'big-box' : ''}}">
+        <view class="t-t">
+          发芽
+        </view>
+        <image class="{{status_sproute ? '' : 't-i'}}" mode="widthFix" src="{{status_sproute || 'https://dpweb.club:3000/1682775586679_rainbow.png'}}" alt="" srcset=""/>
+      </view>
+      <view class="content {{status_germinate ? 'big-box' : ''}}">
+        <view class="t-t">
+          禾苗
+        </view>
+        <image class="{{status_germinate ? '' : 't-i'}}" mode="widthFix" src="{{status_germinate || 'https://dpweb.club:3000/1682775586679_rainbow.png'}}" alt="" srcset=""/>
+      </view>
+      <view class="content {{status_grow ? 'big-box' : ''}}">
+        <view class="t-t">
+          成长
+        </view>
+        <image class="{{status_grow ? '' : 't-i'}}" mode="widthFix" src="{{status_grow || 'https://dpweb.club:3000/1682775586679_rainbow.png'}}" alt="" srcset=""/>
+      </view>
+      <view class="content {{status_mature ? 'big-box' : ''}}">
+        <view class="t-t">
+          成熟
+        </view>
+        <image class="{{status_mature ? '' : 't-i'}}" mode="widthFix" src="{{status_mature || 'https://dpweb.club:3000/1682775586679_rainbow.png'}}" alt="" srcset=""/>
+      </view>
+    </view>
+  </view>
+</view>
+
+<painter style="position: absolute; top: -9999rpx;" palette="{{imgDraw}}" bind:imgOK="onImgOK" />
+<van-popup
+  show="{{ show }}"
+  closeable
+  round
+  position="bottom"
+  custom-style="height: 80%;"
+  bind:close="onClose"
+>
+  <view class="pop-con">
+    <image mode="widthFix" src="{{sharePath}}" class="share-image" />
+    <view class="btn-c">
+      <button class="p-btn" open-type="share">
+        分享
+      </button>
+      <view class="p-btn" bindtap="handlePhotoSaved">
+        保存
+      </view>
+    </view>
+  </view>
+</van-popup>

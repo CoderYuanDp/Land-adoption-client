@@ -1,0 +1,40 @@
+<xr-scene ar-system="modes:Plane" bind:ready="handleReady" bind:ar-ready="handleARReady">
+	<!-- 资源组 -->
+	<xr-assets bind:progress="handleAssetsProgress" bind:loaded="handleAssetsLoaded">
+		<!-- <xr-asset-load type="gltf" asset-id="gltf-item1" src="https://dpweb.club:3000/1682476186825_farm2.glb" /> -->
+		<!-- <xr-asset-load type="gltf" asset-id="gltf-item1" src="https://dpweb.club:3000/1681633097361_farm.glb" /> -->
+		<xr-asset-load type="gltf" asset-id="gltf-item1" src="{{glb}}" />
+		<!-- <xr-asset-load type="gltf" asset-id="gltf-item2" src="https://dpweb.club:3000/1682517558101_fp.glb" /> -->
+
+		<!-- 粒子材质 -->
+		<!-- <xr-asset-load type="texture" asset-id="point" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/particles/point.png" /> -->
+		<!-- 锚点 -->
+		<xr-asset-load type="gltf" asset-id="anchor" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/ar-plane-marker.glb" />
+	</xr-assets>
+	<!-- 场景中所有3D节点的基础 -->
+	<xr-node>
+		<xr-ar-tracker mode="Plane">
+			<xr-gltf model="anchor"></xr-gltf>
+		</xr-ar-tracker>
+		<xr-node node-id="setitem" visible="false">
+      <!-- <block wx:for="{{landlist}}" wx:key="index">
+        <block wx:if="{{index == 0}}">
+          <xr-gltf model="gltf-item1" id="{{item.land_id}}" position="0 0 0" scale="0.005 0.005 0.005" mesh-shape bind:touch-shape="handleTouchModel"></xr-gltf>
+        </block>
+        <block wx:if="{{index == 1}}">
+          <xr-gltf model="gltf-item1" id="{{item.land_id}}" position="2 2 2" scale="0.005 0.005 0.005" mesh-shape bind:touch-shape="handleTouchModel"></xr-gltf>
+        </block>
+      </block> -->
+
+			<xr-gltf model="gltf-item1" id="miku2" position="0 0 0" scale="0.001 0.001 0.001" mesh-shape bind:touch-shape="handleTouchModel"></xr-gltf>
+      <!-- <xr-gltf model="gltf-item2" id="miku1" position="1 1 1" scale="0.0005 0.0005 0.0005" mesh-shape bind:touch-shape="handleTouchModel"></xr-gltf> -->
+			<!-- <xr-particle capacity="500" emit-rate="20" size="0.01 0.01" life-time="2 3" speed="0.04 0.1" start-color="1 1 1 0.8" end-color="1 1 1 0.2" emitter-type="BoxShape" emitter-props="minEmitBox:-0.5 0 0.5,maxEmitBox:0.5 0.2 0,direction:0 0 -1,direction2:0 0 -1" texture="point" /> -->
+			<!-- <xr-particle capacity="500" emit-rate="20" size="0.03 0.06" life-time="2 3" speed="0.04 0.1" start-color="1 1 1 0.8" end-color="1 1 1 0.2" emitter-type="BoxShape" emitter-props="minEmitBox:-1.5 0 0.5,maxEmitBox:-2.5 0.2 0,direction:0 0 -1,direction2:0 0 -1" texture="point" /> -->
+		</xr-node>
+		<xr-camera id="camera" node-id="camera" clear-color="0.925 0.925 0.925 1" background="ar" is-ar-camera></xr-camera>
+	</xr-node>
+	<xr-node node-id="lights">
+		<xr-light type="ambient" color="1 1 1" intensity="1" />
+		<xr-light type="directional" rotation="180 0 0" color="1 1 1" intensity="3" />
+	</xr-node>
+</xr-scene>

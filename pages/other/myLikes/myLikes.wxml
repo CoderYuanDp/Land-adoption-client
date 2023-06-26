@@ -1,0 +1,14 @@
+<!--pages/other/myLikes/myLikes.wxml-->
+<view class="container">
+  <view class="item" wx:for="{{farmList}}" wx:key="farm_id"  data-farm_id="{{item.farm_id}}" bindtap="toFarmDetail">
+    <view class="text-container">
+      <view class="title">
+        {{item.farm_name}}
+      </view>
+      <view class="info"  style="max-width: 200px;">
+        <text>{{item.farm_address}}</text>
+      </view>
+    </view>
+    <image src="{{item.farm_images}}"></image>
+  </view>
+</view>

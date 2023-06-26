@@ -1,0 +1,31 @@
+<!--pages/other/farmlist/farmlist.wxml-->
+
+<image class="head-img" src="https://dpweb.club:3000/1681394234322_city_bg.png" mode=""/>
+<view class="container">
+
+  <view class="latlng">
+    <image src="/assets/icons/lag.png"></image>
+    <view style="height: 80%; display: flex; flex-direction: column; justify-content: space-around;">
+      <view class="lat">经度：{{longitude}}</view>
+      <view class="lng">纬度：{{latitude}}</view>
+      <view class="adres">地址：{{address}}</view>
+    </view>
+  </view>
+
+  <block wx:for="{{farmList}}" wx:for-item="item">
+    <view class="item" wx:key="farm_id" data-farm_id="{{item.farm_id}}" bindtap="toFarmDetail">
+      <image src="{{item.farm_images}}"></image>
+      <view class="text-container">
+        <view class="title">
+          {{item.farm_name}}
+        </view>
+        <view class="tip">
+        </view>
+        <view class="info">
+          <!-- <text>距离50KM</text> -->
+          <text style="display: inline-block; max-width: 200px;">{{item.farm_address}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

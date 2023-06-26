@@ -1,0 +1,15 @@
+<!--pages/land/land.wxml-->
+<view class="container">
+  <view class="empty-status" wx:if="{{myFarmList.length === 0}}">
+    <image src="https://dpweb.club:3000/1681396409767_empty_status.png" mode=""/>
+    <view class="empty-text">您还没有任何土地~</view>
+  </view>
+  
+  <view class="card" wx:for="{{myFarmList}}" wx:key="farm_id" data-orderid="{{item.order_id}}" data-farmname="{{item.farm_name}}" data-landname="{{item.land_name}}" bindtap="toOrderDetail">
+    <image src="{{item.farm_images}}"></image>
+    <view class="text">
+      <view class="title">{{item.land_name}}</view>
+      <view class="address">{{item.farm_address}}</view>
+    </view>
+  </view>
+</view>

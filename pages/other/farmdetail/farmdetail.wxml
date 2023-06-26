@@ -1,0 +1,58 @@
+<!--pages/other/farmdetail/farmdetail.wxml-->
+<view class="container">
+  <image style="width: 100%; height: 300rpx; margin-bottom: 20rpx; border-radius: 5px; margin-top: 5px;" src="{{landList[0].farm_images}}" mode=""/>
+  <view class="msg">
+    <view class="name">{{landList[0].farm_name}}</view>
+    <view class="address-distance">
+      <view>{{landList[0].farm_address}}</view>
+      <view>距离 <text style="color: #000; font-weight: 600;">{{distance ? distance : '--'}}</text> KM</view>
+    </view>
+    <view class="have">还有<text style="color: green; font-weight: 600;"> {{canAdopt}} </text>块土地未被领养</view>
+    <view class="operat">
+          <button bindtap="addLike" class="sharebtn"><image class="icon" src="{{isLike ? 'https://dpweb.club:3000/1681914695344_收藏1.png' : 'https://dpweb.club:3000/1681914695344_收藏2.png'}}" mode=""/>{{isLike ? '收藏' : '已收藏'}}</button>
+          <button open-type="share" class="sharebtn"><image class="icon" src="https://dpweb.club:3000/1681914695344_分享.png" mode=""/>分享</button>
+    </view>
+  </view>
+    
+  <view class="detail">
+    <view class="name">农场详情</view>
+    <view class="detail-container">
+      <view class="d-c-i">农场描述 <view class="desc"> {{landList[0].farm_desc}} </view></view>
+      <view class="d-c-i">占地 <view class="gray">{{landList[0].farm_area}}㎡</view></view>
+      <view class="d-c-i">主要产出 <view class="gray">{{mainPlants}}等</view></view>
+    </view>
+  </view>
+
+</view>
+
+<view class="viewr">
+  <view class="v-t">
+    土地
+  </view>
+  <view class="left">
+    <view wx:for="{{landList}}" wx:key="land_id" class="item {{item.land_id === selectedLandId && item.is_adopted === 0 ? 'item-selected' : ''}} {{item.is_adopted === 1 ? 'is-adoaped' : ''}}" data-landAdopted="{{item.is_adopted}}" data-landId="{{item.land_id}}" bindtap="selectLand">
+      <image src="https://dpweb.club:3000/1681647081806_land.png" mode="" />
+      <view class="{{item.land_id === selectedLandId && item.is_adopted === 0 ? 'land-title' : 'no-title'}}">
+        {{item.land_name}}
+      </view>
+    </view>
+  </view>
+  <view class="v-t" wx:if="{{plants.length !== 0}}">
+    作物
+  </view>
+  <view class="right">
+    <view wx:for="{{plants}}" wx:key="item" class="item" class="item {{item === selectedPlant ? 'item-selected' : ''}}" data-plant="{{item}}" bindtap="selectPlant">
+      <image src="{{vImg[item].src}}" mode="" />
+      <view class="{{item === selectedPlant ? 'land-title' : 'no-title'}}">
+        {{vImg[item].text}}
+      </view>
+    </view>
+  </view>
+  <view class="btn {{selectedLandId && selectedPlant ? 'active' : ''}}" bindtap="confirm">
+    选择领养
+  </view>
+</view>
+
+<view style="height: 100px;">
+  
+</view>

@@ -1,0 +1,8 @@
+<!--pages/other/systemnews/systemnews.wxml-->
+<view class="container">
+  <view class="news" wx:for="{{newsList}}" wx:key="index">
+    <view class="title">系统消息</view>
+    <view class="content">{{item.msg}}</view>
+    <view class="date">{{item.date}}</view>
+  </view>
+</view>

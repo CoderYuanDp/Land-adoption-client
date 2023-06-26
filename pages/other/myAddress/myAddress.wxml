@@ -1,0 +1,34 @@
+<!--pages/other/myAddress/myAddress.wxml-->
+<view class="container">
+  <view wx:if="{{!userInfo.user_address}}" class="no-address">
+    您还没有添加地址 ^-^
+    <view class="i-c">
+      <input class="add-input" value="{{selectAddress}}" bindinput="getAddress"></input><view class="select-btn" bindtap="openPop">选择</view>
+    </view>
+    <view class="add-btn" bindtap="addAddress">添加地址</view>
+  </view>
+  
+  <view wx:if="{{userInfo.user_address}}" class="address">
+    <view style="display: flex;">
+      <image src="https://dpweb.club:3000/1682781965966_znz.png" mode=""/>
+      <view class="s-d">
+        {{userInfo.user_address}}
+      </view>
+    </view>
+    <view class="i-c">
+      <input class="add-input" value="{{selectAddress}}" bindinput="getAddress"></input><view class="select-btn" bindtap="openPop">选择</view>
+    </view>
+    <view class="add-btn" bindtap="addAddress">修改地址</view>
+  </view>
+
+</view>
+
+<van-popup
+  show="{{ show }}"
+  round
+  position="bottom"
+  custom-style="height: 50%"
+  bind:close="onClose"
+  >
+    <van-area title="选择地址" area-list="{{ areaList }}" value="110101" bind:confirm="areaConfirm" bind:cancel="areaCancel"/>
+  </van-popup>

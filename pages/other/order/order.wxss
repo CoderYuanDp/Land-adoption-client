@@ -1,0 +1,59 @@
+/* pages/other/order/order.wxss */
+.container {
+  padding: 20rpx;
+}
+.c-oder {
+  font-weight: 800;
+}
+.btn {
+  width: 70vw;
+  height: 40px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 40px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #d5f553;
+}
+.desc-box input{
+  /* height: 35px; */
+  margin: 10px 0;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 2px solid rgb(141, 194, 105);
+  border-radius: 5px;
+  line-break: after; 
+  height: auto;
+}
+.desc-box {
+  margin-top: 10px;
+}
+.pic {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  color: #ffa143;
+}
+
+.pic text{
+  font-size: 16px;
+  font-style: normal;
+  color: #000;
+}
+
+.itm {
+  display: flex;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #bebebe;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 20px 0;
+  padding: 20rpx;
+  border-radius: 8px;
+  background-color: #f6f7f1;
+}

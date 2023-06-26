@@ -1,0 +1,23 @@
+<!--pages/other/search/search.wxml-->
+<view class="search-box">
+  <van-search value="{{ value }}" bind:change="onChange" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" />
+</view>
+<view class="container">
+<block wx:for="{{farmList}}" wx:for-item="item">
+  <view class="item" wx:key="farm_id" data-farm_id="{{item.farm_id}}" bindtap="toFarmDetail">
+    <image src="{{item.farm_images}}"></image>
+    <view class="text-container">
+      <view class="title">
+        {{item.farm_name}}
+      </view>
+      <view class="tip">
+      </view>
+      <view class="info">
+        <!-- <text>距离50KM</text> -->
+        <text style="display: inline-block; max-width: 200px; color: rgb(173, 173, 173);">{{item.farm_address}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+<view class="bom-tip" wx:if="{{farmList.length >= 3}}">到底了 ^-^</view>
+</view>

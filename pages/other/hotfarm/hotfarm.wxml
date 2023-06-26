@@ -1,0 +1,20 @@
+<!--pages/other/hotfarm/hotfarm.wxml-->
+<view class="header-container">
+    <view class="head-title">热门推荐</view>
+    <view class="hot-title">
+      领养最热门的土地
+    </view>
+    <view class="t-t">
+      每周一更新的市场热门
+    </view>
+    <image class="bg-i" src="https://dpweb.club:3000/1682823602800_grass.png" mode=""/>
+  </view>
+<view class="container">
+  <view class="item" wx:for="{{hotFarmList}}" wx:key="farm_id"  data-farm_id="{{item.farm_id}}" bindtap="toFarmDetail">
+    <image mode="widthFix" style="border-radius: 8px;" src="{{item.farm_images}}"></image>
+    <view class="text">
+      <view class="name">{{item.farm_name}}</view>
+      <view class="address">{{item.farm_address}}</view>
+    </view>
+  </view>
+</view>
